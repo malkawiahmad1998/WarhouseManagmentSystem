@@ -1,2 +1,2 @@
 # WarhouseManagmentSystem
-it's a website that manage stocks that stores in the warehouse 
+it's a website that manage stocks that's stores in the warehouse 
