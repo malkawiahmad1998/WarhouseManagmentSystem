@@ -61,7 +61,7 @@
                         <input type="number" class="form-control" id="Count">
                     </div>
             <div>
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary createBtn">Create</button>
                 
             </div>
                 
@@ -73,7 +73,49 @@
 
 
         <div class="outputs">
+            <div class="searchBlock">
+                <div class="mb-3">
+                    <label for="search" class="search">Search</label>
+                    <input type="text" class="form-control" id="search">
+                </div>
 
+                <div class="btnSearch">
+                    <button id="searchByTitle" class="btn btn-primary">Search By Title</button>
+                    <button id="searchByCategory" class="btn btn-primary">Search By Category</button>
+                </div>
+
+            </div>
+
+            <table>
+                <tr>
+                  <th>Id</th>
+                  <th>Stock Name</th>
+                  <th>Price</th>
+                  <th>Taxes</th>
+                  <th>Ads</th>
+                  <th>Discount</th>
+                  <th>Total</th>
+                  <th>Category</th>
+                  <th>Update</th>
+                  <th>Delete</th>
+                </tr>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>iphone</td>
+                  <td>500$</td>
+                  <td>20$</td>
+                  <td>10$</td>
+                  <td>5%</td>
+                  <td>500</td>
+                  <td>phone</td>
+                  <td><button class="btn btn-primary createBtn tableBtns " id="updateBtn">Update</button></td>
+                  <td><button class="btn btn-primary createBtn tableBtns " id="deleteBtn">Delete</button></td>
+                </tr>
+
+                </tbody>
+                
+            </table>
         </div>
 
     </div>
