@@ -21,9 +21,10 @@
               <a class="navbar-brand" href="#">navbar</a>
             </div>
         </nav>
+        <section>
 
             <div class="inputs">
-                <form>
+                <form id="creationForm">
                     <div class="mb-3">
                         <label for="StockName" class="StockName">Stock Name</label>
                         <input type="text" class="form-control" id="StockName" aria-describedby="emailHelp">
@@ -31,25 +32,25 @@
 
                     <div class="mb-3">
                         <label for="Price" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="Price">
+                        <input onkeyup="getTotal()" type="number" class="form-control" id="Price">
                     </div>
 
                     <div class="mb-3">
                         <label for="Taxes" class="form-label">Taxes</label>
-                        <input type="number" class="form-control" id="Taxes">
+                        <input onkeyup="getTotal()" type="number" class="form-control" id="Taxes">
                     </div>
 
                     <div class="mb-3">
-                        <label for="Taxes" class="Ads">Ads</label>
-                        <input type="number" class="form-control" id="Ads">
+                        <label for="Ads" class="Ads">Ads</label>
+                        <input onkeyup="getTotal()" type="number" class="form-control" id="Ads">
                     </div>
 
                     <div class="mb-3">
-                        <label for="Discount" class="Ads">Discount</label>
-                        <input type="" class="form-control" id="Discount">
+                        <label for="Discount" class="Discount">Discount</label>
+                        <input onkeyup="getTotal()" type="number" class="form-control" id="Discount">
                     </div>
 
-                    <small id="total">Total:</small>
+                    <small id="total"></small>
 
                     <div class="mb-3">
                         <label for="Category" class="Category">Category</label>
@@ -61,7 +62,7 @@
                         <input type="number" class="form-control" id="Count">
                     </div>
             <div>
-                <button type="submit" class="btn btn-primary createBtn">Create</button>
+                <button id="create" class="btn btn-primary createBtn">Create</button>
                 
             </div>
                 
@@ -71,7 +72,7 @@
 
 
 
-
+</section>
         <div class="outputs">
             <div class="searchBlock">
                 <div class="mb-3">
@@ -99,20 +100,8 @@
                   <th>Update</th>
                   <th>Delete</th>
                 </tr>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>iphone</td>
-                  <td>500$</td>
-                  <td>20$</td>
-                  <td>10$</td>
-                  <td>5%</td>
-                  <td>500</td>
-                  <td>phone</td>
-                  <td><button class="btn btn-primary createBtn tableBtns " id="updateBtn">Update</button></td>
-                  <td><button class="btn btn-primary createBtn tableBtns " id="deleteBtn">Delete</button></td>
-                </tr>
-
+                <tbody id="tbody">
+                
                 </tbody>
                 
             </table>
