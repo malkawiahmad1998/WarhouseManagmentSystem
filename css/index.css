@@ -10,7 +10,7 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(104, 7, 96);
     margin-top: 50px;
-    background-color: #eaf4f854;
+    background-color: hsla(69, 34%, 15%, 0.027);
     
     background-size: 100%;
 }
@@ -35,8 +35,8 @@ body{
 
 #gridImg{
     width: 600px;
-    height: 650px;
-    border-radius: 200px;
+    height: 580px;
+    border-radius: 150px;
     margin-right:-290px ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 15px;
@@ -48,9 +48,16 @@ body{
     border-radius: 15px;
 }
 
+
 #header{
     text-align: center;
     font-size: 30px;
+    
+    /* text-transform: uppercase; */
+}
+
+#brand{
+    position: static;
 }
 
 .createBtn{
