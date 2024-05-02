@@ -15,6 +15,8 @@ body{
     background-size: 100%;
 }
 
+
+
 #firstGrid{
     display: grid;
     grid-template-columns: auto auto;
@@ -50,8 +52,11 @@ body{
 
 
 #header{
-    text-align: center;
     font-size: 30px;
+    text-align: center;
+    /* margin-left: 400px; */
+    /* margin:auto; */
+    /* position: relative; */
     
     /* text-transform: uppercase; */
 }
@@ -111,7 +116,7 @@ body{
 
 .btnSearch{
     margin-left: 80px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 #searchByTitle{
     width: 45%;
@@ -127,7 +132,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
     table-layout: fixed;
     
     
@@ -152,3 +157,18 @@ table {
     width: 100px;
   }
 
+.deleteAllClass{
+    margin: 20px 290px;
+}
+
+
+.deleteAllClass:hover{
+    letter-spacing: 1px;
+
+    transition: .5s;
+}
+
+.deleteAllClass:not(:hover){
+    letter-spacing: 0px;
+    transition: .5s;
+}

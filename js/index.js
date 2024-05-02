@@ -53,7 +53,19 @@ create.onclick = function(e){
         Count : Count.value
         
     }
-    stockData.push(newStock);
+    if(newStock.Count > 1)
+    {
+        for (let i = 0; i < newStock.Count; i++) {
+            stockData.push(newStock);    
+        }
+    }
+    else
+    {
+        stockData.push(newStock);
+
+    }
+
+
     localStorage.setItem('stock', JSON.stringify(stockData));
     showData()
     clearData();
@@ -92,12 +104,23 @@ function showData(){
             <td>${stockData[i].Discount}</td>
             <td>${stockData[i].total}</td>
             <td>${stockData[i].Category}</td>
-            <td><button class="btn btn-primary createBtn tableBtns " id="updateBtn">Update</button></td>
+            <td><button onclick="updateData(${i})" class="btn btn-primary createBtn tableBtns " id="updateBtn">Update</button></td>
             <td><button onclick="deleteData(${i})" class="btn btn-primary createBtn tableBtns " id="deleteBtn">Delete</button></td>
         </tr>
 `    
     }
     document.getElementById('tbody').innerHTML = table;
+    let deleteAllBtn = document.getElementById('deleteAll')
+    if(stockData.length > 0){
+        deleteAllBtn.innerHTML =
+        `<button onclick="deleteAllData()" class="btn btn-primary deleteAllClass">Delete All ( ${stockData.length} )</button>
+        `
+    }
+    else{
+            deleteAllBtn.innerHTML = ''
+    }
+    
+    
 }
 showData()
 
@@ -108,3 +131,16 @@ function deleteData(i){
     showData()
 
 }
+
+function updateData(i){
+
+}
+
+//deleteAllData
+function deleteAllData(){
+    localStorage.clear();
+    stockData.splice(0)
+    showData()
+
+}
+
