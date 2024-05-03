@@ -172,3 +172,7 @@ table {
     letter-spacing: 0px;
     transition: .5s;
 }
+
+.hide{
+    display: none;
+}

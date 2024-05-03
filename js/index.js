@@ -8,7 +8,9 @@ let total = document.getElementById('total');
 let Category = document.getElementById('Category');
 let Count = document.getElementById('Count');
 let create = document.getElementById('create');
-
+let countLabel = document.getElementById('countLabel');
+let mood = 'Create';
+let variable;
 
 
 
@@ -53,7 +55,8 @@ create.onclick = function(e){
         Count : Count.value
         
     }
-    if(newStock.Count > 1)
+    if (mood === 'Create') {
+      if(newStock.Count > 1)
     {
         for (let i = 0; i < newStock.Count; i++) {
             stockData.push(newStock);    
@@ -63,7 +66,15 @@ create.onclick = function(e){
     {
         stockData.push(newStock);
 
+    }  
+    }else{
+        stockData[ variable ] = newStock;
+        mood = 'Create'
+        create.innerHTML = 'Create'
+        Count.style.display = 'block'
+        countLabel.style.display = 'block'
     }
+    
 
 
     localStorage.setItem('stock', JSON.stringify(stockData));
@@ -96,7 +107,7 @@ function showData(){
         
          table+= `
         <tr>
-            <td>${i}</td>
+            <td>${i+1}</td>
             <td>${stockData[i].StockName}</td>
             <td>${stockData[i].Price}</td>
             <td>${stockData[i].Taxes}</td>
@@ -133,6 +144,27 @@ function deleteData(i){
 }
 
 function updateData(i){
+    StockName.value = stockData[i].StockName
+    Price.value = stockData[i].Price
+    Taxes.value = stockData[i].Taxes
+    Ads.value = stockData[i].Ads
+    Discount.value = stockData[i].Discount
+    getTotal()
+    Category.value = stockData[i].Category
+    countLabel.style.display = 'none'
+    Count.style.display = 'none'
+    create.innerHTML = 'Update'
+    mood = 'Update'
+    variable = i;
+    scroll({
+        top : 150,
+        behavior:'smooth'
+    })
+    
+
+    
+
+
 
 }
 
