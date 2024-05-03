@@ -173,6 +173,23 @@ table {
     transition: .5s;
 }
 
-.hide{
+#btn{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: rgb(104, 7, 96);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 2px;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
     display: none;
+    
+}
+
+#btn:hover{
+    
+    background-color: rgb(155, 8, 143);
 }
