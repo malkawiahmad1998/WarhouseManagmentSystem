@@ -61,9 +61,7 @@ body{
     /* text-transform: uppercase; */
 }
 
-#brand{
-    position: static;
-}
+
 
 .createBtn{
     background: rgb(104, 7, 96);
@@ -245,11 +243,29 @@ text-align: center;
 
 #User{
     transition: .5s;
-    margin-right:5px ;
+    margin-right:0px ;
 
 }
 
 #User:hover{
     letter-spacing: 1px;
 
+}
+
+.navbarBtn{
+    right: 5px;
+    position: absolute;
+    padding: 5px; 
+    width: 140px;
+    
+    
+}
+
+#logOutBtn{
+    margin-right: 0px;
+    display: none;
+}
+
+#loginOrRegisterBtn{
+    display: none;
 }

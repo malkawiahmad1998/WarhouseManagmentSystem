@@ -13,17 +13,31 @@ let mood = 'Create';
 let variable;
 
 let isLogin = JSON.parse(localStorage.getItem('isLoggedIn'))
+let loginOrRegisterBtn = document.getElementById('loginOrRegisterBtn')
+let logOutBtn = document.getElementById('logOutBtn')
 
-if(isLogin == null){
-    window.location.href = 'login.html'
-}
-else if(isLogin == false){
-    window.location.href = 'login.html'
+if(isLogin == true){
+    logOutBtn.style.display = 'block'
+
+}else if(isLogin == null){
+    loginOrRegisterBtn.style.display = 'block'
+
 }
 else
 {
-    console.log('loggedin')
+    loginOrRegisterBtn.style.display = 'block'
 }
+
+loginOrRegisterBtn.onclick = function(){
+    window.location.href = 'login.html'
+}
+
+logOutBtn.onclick = function(){
+    window.location.href = 'login.html'
+    localStorage.setItem('isLoggedIn',false)
+}
+
+
 
 function getTotal(){
     if(Price.value != ''){
