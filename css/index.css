@@ -242,3 +242,14 @@ table {
     margin-top: 80px;
 text-align: center;
 }
+
+#User{
+    transition: .5s;
+    margin-right:5px ;
+
+}
+
+#User:hover{
+    letter-spacing: 1px;
+
+}

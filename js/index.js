@@ -12,7 +12,18 @@ let countLabel = document.getElementById('countLabel');
 let mood = 'Create';
 let variable;
 
+let isLogin = JSON.parse(localStorage.getItem('isLoggedIn'))
 
+if(isLogin == null){
+    window.location.href = 'login.html'
+}
+else if(isLogin == false){
+    window.location.href = 'login.html'
+}
+else
+{
+    console.log('loggedin')
+}
 
 function getTotal(){
     if(Price.value != ''){
@@ -270,4 +281,6 @@ btn.onclick = function () {
         behavior:'smooth',
     })
 }
+
+
 
