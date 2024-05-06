@@ -27,6 +27,7 @@ if(localStorage.AllUserss != null){
       if(registerName.value && registerEmail.value && registerPassword.value && registerRepeatPassword.value != null){
         AllUsers.push(userData);
         alert('Welcome to Warehouse management WebSite website')
+        window.location.href = 'login.html'
       }
       else
       {
@@ -82,3 +83,4 @@ clearBtn.onclick = function(e){
   e.preventDefault();
   localStorage.clear()
 }
+

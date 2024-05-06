@@ -30,6 +30,8 @@ else
 
 loginOrRegisterBtn.onclick = function(){
     window.location.href = 'login.html'
+    
+
 }
 
 logOutBtn.onclick = function(){
