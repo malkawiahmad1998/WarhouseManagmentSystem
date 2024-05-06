@@ -62,7 +62,6 @@ signIn.onclick = function(e){
       localStorage.setItem('isLoggedIn',true)
       window.location.href = 'index.html'
       
-
     }
     else
     {

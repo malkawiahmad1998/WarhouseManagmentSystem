@@ -93,7 +93,6 @@ create.onclick = function(e){
     else
     {
         stockData.push(newStock);
-
     }  
     clearData();
     }else{
@@ -102,6 +101,7 @@ create.onclick = function(e){
         create.innerHTML = 'Create'
         Count.style.display = 'block'
         countLabel.style.display = 'block'
+        clearData();
     }}
     
     
@@ -186,6 +186,7 @@ function updateData(i){
     create.innerHTML = 'Update'
     mood = 'Update'
     variable = i;
+    
     scroll({
         top : 150,
         behavior:'smooth'
@@ -197,6 +198,7 @@ function updateData(i){
 
 
 }
+
 
 //deleteAllData
 function deleteAllData(){
