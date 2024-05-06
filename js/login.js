@@ -68,6 +68,7 @@ signIn.onclick = function(e){
       
       loginName.value = '';
       loginPassword.value = '';
+      
 
     }
     
