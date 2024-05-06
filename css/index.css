@@ -38,12 +38,37 @@ body{
 #gridImg{
     width: 600px;
     height: 580px;
-    border-radius: 150px;
-    margin-right:-290px ;
+    border-radius: 300px;
+    margin-right:-400px ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 15px;
 }
 
+.rightGridcards{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+}
+
+.rightGrid{
+    margin-left: 180px;
+}
+
+.form-control{
+    width: 150%;
+}
+.gridCards{
+    width: 200px;
+    margin-left: 35px;
+    background-color: rgba(255, 255, 255, 0.699);
+    margin-top: -100px;
+    color: rgba(0, 0, 0, 0.733);
+    border: 1px rgba(0, 0, 0, 0.151) solid;
+    border-radius: 45px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
 #wmsImg{
     width: 50px;
     height: 50px;
@@ -110,6 +135,9 @@ body{
 .outputs{
     margin-top: 70px;
     margin-left: 20px;
+}
+#search{
+    width: 100%;
 }
 #searchByStockName{
     width: 500px;
