@@ -58,6 +58,7 @@ signIn.onclick = function(e){
   e.preventDefault();
   for (let i = 0; i < AllUsers.length; i++) {
     if(loginName.value == AllUsers[i].registerEmail && loginPassword.value == AllUsers[i].registerPassword){
+    if(AllUsers[i].registerEmail === loginName.value && AllUsers[i].registerPassword === loginPassword.value  ){
       
       localStorage.setItem('isLoggedIn',true)
       window.location.href = 'index.html'
