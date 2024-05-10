@@ -58,7 +58,7 @@ signIn.onclick = function(e){
   e.preventDefault();
   for (let i = 0; i < AllUsers.length; i++) {
     console.log(loginName.value)
-    if(AllUsers[i].registerEmail === loginName.value && AllUsers[i].registerPassword === loginPassword.value  ){
+    if(AllUsers[i].registerEmail == loginName.value && AllUsers[i].registerPassword == loginPassword.value){
       
       localStorage.setItem('isLoggedIn',true)
       window.location.href ='index.html'
@@ -66,10 +66,10 @@ signIn.onclick = function(e){
     }
     
   }
-if(localStorage.getItem('isLoggedIn')!= true){
-  alert('username or pass wrong')
-}
-
+// if(localStorage.getItem('isLoggedIn') == false){
+//   alert('username or pass wrong')
+// }
+console.log(AllUsers[i].registerPassword)
 }
 
 let clearBtn = document.getElementById('clearBtn')
