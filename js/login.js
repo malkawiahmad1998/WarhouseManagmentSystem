@@ -57,23 +57,18 @@ let signIn = document.getElementById('signIn');
 signIn.onclick = function(e){
   e.preventDefault();
   for (let i = 0; i < AllUsers.length; i++) {
+    console.log(loginName.value)
     if(AllUsers[i].registerEmail === loginName.value && AllUsers[i].registerPassword === loginPassword.value  ){
       
       localStorage.setItem('isLoggedIn',true)
-      window.location.href = 'index.html'
+      window.location.href ='index.html'
       
-    }
-    else
-    {
-      
-      loginName.value = '';
-      loginPassword.value = '';
-      
-
     }
     
   }
-
+if(localStorage.getItem('isLoggedIn')!= true){
+  alert('username or pass wrong')
+}
 
 }
 
