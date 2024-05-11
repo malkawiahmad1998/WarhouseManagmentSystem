@@ -69,7 +69,6 @@ signIn.onclick = function(e){
 // if(localStorage.getItem('isLoggedIn') == false){
 //   alert('username or pass wrong')
 // }
-console.log(AllUsers[i].registerPassword)
 }
 
 let clearBtn = document.getElementById('clearBtn')

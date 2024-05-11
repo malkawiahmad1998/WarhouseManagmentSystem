@@ -297,3 +297,14 @@ text-align: center;
 #loginOrRegisterBtn{
     display: none;
 }
+
+#profileBtn{
+    display: none;
+    position: absolute;
+    padding: 5px; 
+    width: 140px;
+    right: 160px;
+
+
+
+}

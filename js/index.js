@@ -15,12 +15,15 @@ let variable;
 let isLogin = JSON.parse(localStorage.getItem('isLoggedIn'))
 let loginOrRegisterBtn = document.getElementById('loginOrRegisterBtn')
 let logOutBtn = document.getElementById('logOutBtn')
+let profileBtn = document.getElementById('profileBtn')
 
 if(isLogin == true){
     logOutBtn.style.display = 'block'
+    profileBtn.style.display = 'block'
 
 }else if(isLogin == null){
     loginOrRegisterBtn.style.display = 'block'
+    
 
 }
 else
@@ -37,6 +40,10 @@ loginOrRegisterBtn.onclick = function(){
 logOutBtn.onclick = function(){
     window.location.href = 'login.html'
     localStorage.setItem('isLoggedIn',false)
+}
+
+profileBtn.onclick = function(){
+    window.location.href = 'profile.html'
 }
 
 
