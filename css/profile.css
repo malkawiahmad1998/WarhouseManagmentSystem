@@ -4,5 +4,18 @@
 }
 
 #homePage{
-    margin-left: 180px;
+    margin-left: 380px;
+}
+
+.space{
+   width: 100%;
+}
+
+.Information{
+    margin-top: 50px;
+}
+
+.icons{
+    margin-left: -173px;
+    margin-top: -50px;
 }
