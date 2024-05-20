@@ -73,8 +73,8 @@ signIn.onclick = function(e){
 
 let clearBtn = document.getElementById('clearBtn')
 
-// clearBtn.onclick = function(e){
-//   e.preventDefault();
-//   localStorage.clear()
-// }
+clearBtn.onclick = function(e){
+  e.preventDefault();
+  localStorage.clear()
+}
 
