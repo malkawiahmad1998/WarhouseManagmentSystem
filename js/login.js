@@ -57,7 +57,7 @@ let signIn = document.getElementById('signIn');
 signIn.onclick = function(e){
   e.preventDefault();
   for (let i = 0; i < AllUsers.length; i++) {
-    console.log(loginName.value)
+    
     if(AllUsers[i].registerEmail == loginName.value && AllUsers[i].registerPassword == loginPassword.value){
       
       localStorage.setItem('isLoggedIn',true)
