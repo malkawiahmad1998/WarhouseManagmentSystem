@@ -13,6 +13,10 @@ if(isLogin == true){
         
     }
 }
+else
+{
+    window.location.href = 'login.html'
+}
 
 homePage.onclick = function(){
     window.location.href = "index.html"

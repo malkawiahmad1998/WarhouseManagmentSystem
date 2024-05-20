@@ -23,12 +23,14 @@ if(isLogin == true){
 
 }else if(isLogin == null){
     loginOrRegisterBtn.style.display = 'block'
-    
+    window.location.href = 'login.html'
+
 
 }
 else
 {
     loginOrRegisterBtn.style.display = 'block'
+    window.location.href = 'login.html'
 }
 
 loginOrRegisterBtn.onclick = function(){
